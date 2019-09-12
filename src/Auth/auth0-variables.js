@@ -3,5 +3,5 @@ import { authDomain, authClientId } from '../constants';
 export const AUTH_CONFIG = {
   domain: authDomain,
   clientId: authClientId,
-  callbackUrl: 'https://amsrecordcollection.herokuapp.com/callback'
+  callbackUrl: 'https://amsrecordcollection.netlify.com/callback'
 };
