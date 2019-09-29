@@ -9,6 +9,7 @@ export class NavDrawer extends React.Component {
         anchor="top"
         open={this.props.drawerOpened}
         onClose={this.props.toggleDrawer(false)}
+        style={{ backgroundColor: 'lightgreen' }}
       >
         <div
           onClick={this.props.toggleDrawer(false)}
@@ -31,6 +32,12 @@ export class NavDrawer extends React.Component {
               <Link className="Link" to="/amrecordcollection">
                 {' '}
                 AM'sRecordCollection{' '}
+              </Link>
+            </li>
+            <li>
+              <Link className="Link" to="/resources">
+                {' '}
+                Resources{' '}
               </Link>
             </li>
           </ul>

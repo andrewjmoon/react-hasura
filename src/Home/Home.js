@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 
 class Home extends Component {
@@ -11,21 +11,48 @@ class Home extends Component {
     if (isAuthenticated()) {
       return (
         <div>
-          <Link className="center" to="/home">
+          <Button
+            component={Link}
+            variant="contained"
+            color="primary"
+            className="center"
+            to="/home"
+          >
             Home
-          </Link>
+          </Button>
           <br />
-          <Link className="center" to="/records">
+          <br />
+          <Button
+            component={Link}
+            variant="contained"
+            className="center"
+            to="/records"
+            color="primary"
+          >
             Records List
-          </Link>
+          </Button>
           <br />
-          <Link className="center" to="/combinedrecords">
+          <br />
+          <Button
+            component={Link}
+            className="center"
+            variant="contained"
+            to="/combinedrecords"
+            color="primary"
+          >
             Record Input and List
-          </Link>
+          </Button>
           <br />
-          <Link className="center" to="/amrecordcollection">
+          <br />
+          <Button
+            component={Link}
+            variant="contained"
+            className="center"
+            to="/amrecordcollection"
+            color="primary"
+          >
             AM's Record Collection List
-          </Link>
+          </Button>
           <br />
         </div>
       );

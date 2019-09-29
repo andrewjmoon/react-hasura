@@ -8,10 +8,14 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import './App.css';
 import { NavDrawer } from './NavDrawer';
+import { Link } from 'react-router-dom';
 
 const styles = {
+  secondaryBar: {
+    zIndex: 0
+  },
   root: {
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E20 90%)',
+    background: 'linear-gradient(45deg, #00BFFF 30%, #000080 70%)',
     borderRadius: 3,
     border: 0,
     color: 'white',
@@ -24,7 +28,8 @@ const styles = {
   },
   title: {
     flexGrow: 3,
-    alignItems: 'center'
+    alignItems: 'center',
+    color: 'white'
   },
   center: {
     alignItems: 'center'
@@ -83,7 +88,7 @@ class App extends Component {
                 toggleDrawer={this.toggleDrawer}
               />
             )}
-            <Typography variant="h6" className={classes.title}>
+            <Typography variant="h3" align="center" className={classes.title}>
               <b>Record Collection</b>
             </Typography>
             <Button
@@ -110,6 +115,32 @@ class App extends Component {
                 Log Out
               </Button>
             )}
+          </Toolbar>
+        </AppBar>
+        <AppBar
+          style={{ backgroundColor: 'darkgreen', color: 'white' }}
+          className={classes.secondaryBar}
+          color="primary"
+          position="static"
+          elevation={0}
+        >
+          <Toolbar className={classes.title}>
+            <Link className={classes.title} to="/about">
+              {' '}
+              About Page
+            </Link>
+            <Link className={classes.title} to="/combinedrecords">
+              {' '}
+              Record Input and List{' '}
+            </Link>
+            <Link className={classes.title} to="/amrecordcollection">
+              {' '}
+              AM'sRecordCollection{' '}
+            </Link>
+            <Link className={classes.title} to="/resources">
+              {' '}
+              Resouces
+            </Link>
           </Toolbar>
         </AppBar>
       </>

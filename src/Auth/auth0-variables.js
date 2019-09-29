@@ -5,3 +5,5 @@ export const AUTH_CONFIG = {
   clientId: authClientId,
   callbackUrl: 'https://amsrecordcollection.netlify.com/callback'
 };
+//https://amsrecordcollection.netlify.com/callback
+//http://localhost:3000/callback

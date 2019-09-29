@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Mutation } from 'react-apollo';
 import { addRecord, getRecords } from './Queries';
 
+
 const RecordInput = () => {
   const [band, setBand] = useState('');
   const [album, setAlbum] = useState('');

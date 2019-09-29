@@ -16,6 +16,8 @@ import RecordInput from './Todo/RecordInput';
 import RecordList from './Todo/RecordList';
 import RecordInfo from './Todo/RecordInfo';
 import CombinedRecords from './Todo/RecordComponent';
+import About from './Todo/About';
+import Resources from './Todo/Resources';
 
 const httpLink = createHttpLink({
   uri: GRAPHQL_URL
@@ -65,6 +67,10 @@ export const makeMainRoutes = () => {
           render={props => provideClient(<Home auth={auth} {...props} />)}
         />
         <Route
+          path="/about"
+          render={props => provideClient(<About auth={auth} {...props} />)}
+        />
+        <Route
           path="/records"
           render={props => provideClient(<RecordList auth={auth} {...props} />)}
         />
@@ -83,6 +89,10 @@ export const makeMainRoutes = () => {
           render={props =>
             provideClient(<CombinedRecords auth={auth} {...props} />)
           }
+        />
+        <Route
+          path="/resources"
+          render={props => provideClient(<Resources auth={auth} {...props} />)}
         />
         <Route
           path="/callback"

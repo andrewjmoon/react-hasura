@@ -8,4 +8,36 @@ body {
   justify-content: center;
   color: black;
   align-items: center;
+  list-style-type: none;
+}
+.Link2 {
+  justify-content: center;
+  color: black;
+  align-items: center;
+  font-size: 20px
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination li {
+  text-align: center;
+  margin: 3px;
+  min-width: 30px;
+  padding: 5px;
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: white;
+  list-style-type: none;
+}
+.pagination li:hover {
+  background: #f1f1f1;
+}
+
+.pagination .active {
+  background: #b6d2fc;
+  pointer-events: none;
 }
